@@ -274,6 +274,7 @@ public class MultiImagePickerPlugin implements MethodCallHandler, PluginRegistry
         Matisse.from(MultiImagePickerPlugin.this.activity)
                 .choose(MimeType.ofImage())
                 .countable(true)
+                .showSingleMediaType(true)
                 .capture(enableCamera)
                 .captureStrategy(
                     new CaptureStrategy(true, packageName + ".multiimagepicker.fileprovider")
